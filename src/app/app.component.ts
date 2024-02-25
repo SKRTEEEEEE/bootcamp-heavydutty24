@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HdWalletMultiButtonComponent } from '@heavy-duty/wallet-adapter-material';
 
 @Component({
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, HdWalletMultiButtonComponent],
   /*Cambiamos el nombre del selector de
   prueba1-bcsolana ... en selector y title
   por
@@ -13,8 +14,10 @@ import { RouterModule } from '@angular/router';
   selector: 'bob-root',
   template: `
   <header>
-  <h1>Hola, soy Bob</h1>
-</header>
+    <h1>Hola, soy Bob</h1>
+
+    <hd-wallet-multi-button></hd-wallet-multi-button>
+  </header>
   `
 })
 export class AppComponent {
