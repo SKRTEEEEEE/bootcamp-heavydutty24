@@ -25,13 +25,24 @@ import { toSignal } from "@angular/core/rxjs-interop"
     </div>
 
     @if (account()) {
-      <div>
+      <div class="absolute top-4 left-4 flex -jstify-center items-center gap-2">
         <!-- al poner el [src] le decimos a img que src puede cambiar -->
           <img [src]="account()?.info?.image" class="w-8 h-8" alt="">
-          <p>{{account()?.balance}}</p>
+          <p class="text-xl">{{account()?.balance}}</p>
       </div>
     }
+
+      <nav>
+        <ul>
+          <!-- Se eliminan las comillas adicionales en las rutas -->
+          <li><a [routerLink]="['']">Home</a></li>
+          <li><a [routerLink]="['settings']">Settings</a></li>
+        </ul>
+      </nav>
   </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
   `
 })
 /*
