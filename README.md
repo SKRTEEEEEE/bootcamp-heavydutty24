@@ -11,7 +11,6 @@
 
 To start the development server run `npx nx serve prueba1-bcsolana`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
-
 ### If you have nx in your system:
 
 To start the development server run `nx serve prueba1-bcsolana`. Open your browser and navigate to http://localhost:4200/. Happy coding!

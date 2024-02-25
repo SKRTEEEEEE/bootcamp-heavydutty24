@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'prueba1-bcsolana-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  imports: [RouterModule],
+  /*Cambiamos el nombre del selector de
+  prueba1-bcsolana ... en selector y title
+  por
+  bob-root y bob
+
+  */
+  selector: 'bob-root',
+  template: `
+  <header>
+  <h1>Hola, soy Bob</h1>
+</header>
+  `
 })
 export class AppComponent {
-  title = 'prueba1-bcsolana';
+  title = 'bob';
 }
