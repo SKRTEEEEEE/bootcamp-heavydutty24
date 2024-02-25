@@ -8,7 +8,7 @@ export { Injectable } from "@angular/core"
 export class ShyftApiService {
     private readonly _httpClient: HttpClient = inject(HttpClient);
     private readonly _header: { "x-api-key": string} = {"x-api-key": "uRkHgnKWWnuGMKV4"};
-    private readonly _mint = "7EYnhQoR9YM3N7UoaKRoA44Uy8JeaZV3qyouov87awMs";
+    private readonly _mint = "7EYnhQoR9YM3N7UoaKRoA44Uy8JeaZV3qyouov87awMs"; //silly
 
     getAccount(publicKey: string | undefined | null) {
         if(!publicKey){

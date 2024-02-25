@@ -7,6 +7,7 @@ import { computedAsync } from "ngxtension/computed-async"
 import { toSignal } from "@angular/core/rxjs-interop"
 
 @Component({
+  
   standalone: true,
   imports: [RouterModule, HdWalletMultiButtonComponent],
   /*Cambiamos el nombre del selector de
@@ -25,7 +26,9 @@ import { toSignal } from "@angular/core/rxjs-interop"
 
     @if (account()) {
       <div>
-          jskadhasjhasdjkasdhg
+        <!-- al poner el [src] le decimos a img que src puede cambiar -->
+          <img [src]="account()?.info?.image" class="w-8 h-8" alt="">
+          <p>{{account()?.balance}}</p>
       </div>
     }
   </header>
