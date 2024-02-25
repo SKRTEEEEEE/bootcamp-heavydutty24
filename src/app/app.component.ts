@@ -13,10 +13,11 @@ import { HdWalletMultiButtonComponent } from '@heavy-duty/wallet-adapter-materia
   */
   selector: 'bob-root',
   template: `
-  <header>
-    <h1>Hola, soy Bob</h1>
-
-    <hd-wallet-multi-button></hd-wallet-multi-button>
+  <header class="p-8">
+    <h1 class="text-5xl text-center mb-4 ">Hola, soy Bob</h1>
+    <div class="flex justify-center">
+      <hd-wallet-multi-button></hd-wallet-multi-button>
+    </div>
   </header>
   `
 })
