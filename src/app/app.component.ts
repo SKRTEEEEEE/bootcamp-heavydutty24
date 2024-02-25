@@ -5,11 +5,12 @@ import { ShyftApiService } from './shyft-api.service';
 import { WalletStore } from '@heavy-duty/wallet-adapter';
 import { computedAsync } from "ngxtension/computed-async"
 import { toSignal } from "@angular/core/rxjs-interop"
+import { MatAnchor } from "@angular/material/button"
 
 @Component({
   
   standalone: true,
-  imports: [RouterModule, HdWalletMultiButtonComponent],
+  imports: [RouterModule, HdWalletMultiButtonComponent, MatAnchor],
   /*Cambiamos el nombre del selector de
   prueba1-bcsolana ... en selector y title
   por
@@ -20,7 +21,7 @@ import { toSignal } from "@angular/core/rxjs-interop"
   template: `
   <header class="p-8">
     <h1 class="text-5xl text-center mb-4 ">Hola, soy Bob</h1>
-    <div class="flex justify-center">
+    <div class="flex justify-center mb-4">
       <hd-wallet-multi-button></hd-wallet-multi-button>
     </div>
 
@@ -33,10 +34,10 @@ import { toSignal } from "@angular/core/rxjs-interop"
     }
 
       <nav>
-        <ul>
+        <ul class=" flex justify-center items-center gap-4">
           <!-- Se eliminan las comillas adicionales en las rutas -->
-          <li><a [routerLink]="['']">Home</a></li>
-          <li><a [routerLink]="['settings']">Settings</a></li>
+          <li><a [routerLink]="['']" mat-raised-button>Home</a></li>
+          <li><a [routerLink]="['settings']" mat-raised-button>Settings</a></li>
         </ul>
       </nav>
   </header>
